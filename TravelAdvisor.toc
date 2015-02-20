@@ -6,5 +6,6 @@
 Libs\libs.xml
 TravelAdvisor.xml
 TravelAdvisor.lua
+LocationGraph.lua
 LuaUtils.lua
 

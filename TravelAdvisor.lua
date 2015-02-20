@@ -2,7 +2,9 @@
 TA = LibStub('AceAddon-3.0'):NewAddon('Travel Advisor')
 
 -- Set up TA submodule stubs
-TA.LuaUtils = {}
+TA.LuaUtils, TA.LocationGraph = {}
+
+
 
 -- Forward declare private functions
 local setUpSlashCommand, hasItem
@@ -21,6 +23,17 @@ function TA.OnLoad()
 end
 
 
+function TA.OnSlashInvocation()
+   print('Welcome to TA!')
+
+   local inv = TA.GetTravelItemsOnPlayer()
+
+   TA.LuaUtils.PrintTable(inv)
+
+   
+end
+
+
 -------------------------------------------------------------------------------
 -- Gets a table representing all of the travel-relevant items which the player 
 -- has on them.
@@ -34,13 +47,16 @@ function TA.GetTravelItemsOnPlayer()
 end
 
 
-function TA.OnSlashInvocation()
-   print('Welcome to TA!')
+function TA.GetCurrentLocation()
+   -- print(GetCurrentMapContinent())
 
-   local inv = TA.GetTravelItemsOnPlayer()
-
-   TA.LuaUtils.PrintTable(inv)
+   local mapAreaId = GetCurrentMapAreaID()
+   print(mapAreaId)
+   print(GetMapNameByID(mapAreaId))
+   
+   return mapAreaId
 end
+
 
 
 
