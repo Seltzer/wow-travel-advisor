@@ -1,9 +1,0 @@
-## Interface: 60000
-## Title: Travel Advisor 1.0.0
-## Version: 1.0.0
-## Author: Nathan Pitman
-## Notes: 
-## DefaultState: Enabled
-## LoadOnDemand: 0
-
-travel-advisor.lua
