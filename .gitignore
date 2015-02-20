@@ -63,5 +63,4 @@ target/
 .[#]*
 
 # Project specific
-parsetab.py
-parser.out
+test.lua
