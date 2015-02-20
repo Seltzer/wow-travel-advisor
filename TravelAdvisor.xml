@@ -3,7 +3,7 @@
   <Frame name="Travel Advisor"> 
     <Scripts> 
       <OnLoad> 
-	TravelAdvisor_OnLoad();
+	TA.OnLoad();
       </OnLoad>
     </Scripts>
   </Frame>
