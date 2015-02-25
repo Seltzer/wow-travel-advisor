@@ -30,7 +30,21 @@ function TA.OnSlashInvocation()
 
    TA.LuaUtils.PrintTable(inv)
 
-   
+
+   local status, err = pcall(
+      function()
+	 local locationGraph = TA.LocationGraph:new()
+
+	 print('shizzle')
+	 local dist = locationGraph.ComputeDistance(949, 976)
+
+	 print('distance')
+	 print(dist)
+      end)
+
+   if not status then
+      print(err.code)
+   end   
 end
 
 
