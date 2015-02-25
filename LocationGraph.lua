@@ -16,9 +16,11 @@ function TA.LocationGraph:Test()
    print('test')
 end
 
+
 function TA.LocationGraph:Test2()
    return self.arcs[1].time
 end
+
 
 function TA.LocationGraph:ComputeDistance(from, to)
    local source = self.nodes[from];

@@ -43,6 +43,7 @@ function TA.OnSlashInvocation()
       end)
 
    if not status then
+      print('error')
       print(err.code)
    end   
 end
